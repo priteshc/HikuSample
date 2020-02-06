@@ -262,7 +262,7 @@ class Morphing1 : AppCompatActivity() {
 
                     lin1.visibility = View.GONE
                     txt1.visibility = View.VISIBLE
-                    clickme.visibility = View.VISIBLE
+                    clickme.visibility = View.GONE
 
                     val path = Path()
                     path.setLastPoint(card.x, card.y)
@@ -270,6 +270,7 @@ class Morphing1 : AppCompatActivity() {
                     val animator1 = ObjectAnimator.ofFloat(card, View.X, View.Y, path)
                     animator1.duration = 2000
                     animator1.start()
+
 
 
                 }
