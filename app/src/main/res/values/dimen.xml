@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="morphing_original_size">130dp</dimen>
+    <dimen name="morphing_original_radius">44dp</dimen>
+    <dimen name="morphing_target_radius_1">16dp</dimen>
+    <dimen name="morphing_target_radius_2">16dp</dimen>
+
+    <dimen name="change_shape_original_size">100dp</dimen>
+
+</resources>

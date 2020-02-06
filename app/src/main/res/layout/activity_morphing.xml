@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MorphingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+
+        >
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="@dimen/morphing_original_size"
+        android:layout_height="@dimen/morphing_original_size"
+        android:layout_centerInParent="true"
+        android:background="@android:color/holo_orange_dark"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="false"
+        app:cardPreventCornerOverlap="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_centerInParent="true"
+               android:id="@+id/lin1"
+               >
+            <View
+                android:layout_width="70dp"
+                android:layout_height="10dp"
+                android:id="@+id/v1"
+                />
+            <View
+                android:layout_width="40dp"
+                android:layout_height="10dp"
+                android:id="@+id/v2"
+
+                />
+            <View
+                android:layout_width="50dp"
+                android:layout_height="10dp"
+                android:id="@+id/v3"
+                />
+
+           </LinearLayout>
+
+            <EditText
+                android:id="@+id/txt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type here"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+    <!--android:layout_margin="@dimen/activity_horizontal_margin"-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/civil"
+        app:civ_border_width="1dp"
+        android:elevation="4dp"
+        android:layout_above="@+id/card"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="40dp"
+        app:civ_border_color="#FF000000"
+        android:visibility="gone"
+            />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/civil"
+            app:civ_border_width="1dp"
+            android:elevation="4dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            app:civ_border_color="#FF000000"
+            android:visibility="gone"
+
+            />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/civil"
+            app:civ_border_width="1dp"
+            android:elevation="4dp"
+            android:layout_above="@+id/card"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            app:civ_border_color="#FF000000"
+            android:visibility="gone"
+
+            />
+
+        <Button
+            android:id="@+id/clickme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card"
+            android:text="Next"
+            android:padding="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            android:id="@+id/clickme1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card"
+            android:text="Next"
+            android:padding="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
