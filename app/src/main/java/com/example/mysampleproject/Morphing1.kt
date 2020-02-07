@@ -13,9 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import kotlinx.android.synthetic.main.activity_morphing.*
 
-/**
- * Created by laetitia on 9/9/15.
- */
+
 class Morphing1 : AppCompatActivity() {
 
     private val ANIMATION_INTERVAL_MS = 600
@@ -202,7 +200,7 @@ class Morphing1 : AppCompatActivity() {
             img2.visibility = View.VISIBLE
 
             // From circle to small square
-            toSmallSquare = ObjectAnimator.ofFloat(1f, 0f) // A set of values that the animation will animate between over time.
+            toSmallSquare = ObjectAnimator.ofFloat(1f, 0f)
             toSmallSquare.addUpdateListener { animation ->
                 //  Redraw the cardview on each update
 
@@ -213,7 +211,7 @@ class Morphing1 : AppCompatActivity() {
             val animatorSet = AnimatorSet()
             animatorSet.playSequentially(toSmallSquare)
             animatorSet.duration = ANIMATION_DURATION_MS.toLong()
-            animatorSet.interpolator = PathInterpolator(0.75f, 0f, 0.25f, 1f) // see http://cubic-bezier.com/#.75,0,.25,1
+            animatorSet.interpolator = PathInterpolator(0.75f, 0f, 0.25f, 1f)
             animatorSet.start()
             animatorSet.addListener(object : Animator.AnimatorListener {
                 override fun onAnimationStart(animator: Animator) {
@@ -239,7 +237,7 @@ class Morphing1 : AppCompatActivity() {
 
         } else {
 
-            toSmallRectangle = ObjectAnimator.ofFloat(1f, 0f) // A set of values that the animation will animate between over time.
+            toSmallRectangle = ObjectAnimator.ofFloat(1f, 0f)
             toSmallRectangle.startDelay = ANIMATION_INTERVAL_MS.toLong()
             toSmallRectangle.addUpdateListener { animation ->
                 transformMaterial(mTargetSize1, mOrigSize, mTargetSize1, mOrigSize, mTargetRadius2, mTargetRadius1, animation)
@@ -249,7 +247,7 @@ class Morphing1 : AppCompatActivity() {
             val animatorSet = AnimatorSet()
             animatorSet.playSequentially(toSmallRectangle)
             animatorSet.duration = ANIMATION_DURATION_MS.toLong()
-            animatorSet.interpolator = PathInterpolator(0.75f, 0f, 0.25f, 1f) // see http://cubic-bezier.com/#.75,0,.25,1
+            animatorSet.interpolator = PathInterpolator(0.75f, 0f, 0.25f, 1f)
             animatorSet.start()
 
             animatorSet.addListener(object : Animator.AnimatorListener {
